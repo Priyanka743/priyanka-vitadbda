@@ -1,0 +1,51 @@
+##Que1:Ans(i)
+num=int(input("Enter the number"))
+count=0
+while num>0:
+    num=num//10
+    count+=1
+print("Total number of digits are:",count)
+
+Ans:(ii)
+list1=[10,20,30,40,50]
+for i in range(len(list1)):
+    tmp=list1[::-1]
+    print(tmp)
+
+##Que:2 Ans:
+str1=input("Enter the string")
+str2=input("Enter the string")
+mid=int(len(str1)/2)
+str=str1[0:mid-1]+str2+str1[mid-1: ]
+print(str)
+
+
+##Que3:Ans
+str=input("Enter the string")
+tmp=str.split()
+lower=[]
+upper=[]
+for ch in str:
+    if ch.islower():
+        lower.append(ch)
+    else:
+        upper.append(ch)
+result="".join(lower+upper)
+print(result)
+
+
+##Que5:Ans
+listOne = [3,6,9,12,15,18,21]
+listTwo = [4,8,12,16,20,24,28]
+odd_index=[]
+even_index=[]
+listThree=[]
+for i in listOne:
+    if i%2==0:
+        odd_index.append(i)
+for i in listTwo:
+    if i%2!=0:
+        even_index.append(i)
+listThree=odd_index+even_index
+print(listThree)
+
