@@ -1,0 +1,64 @@
+Que 1:Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5,between 2000 and 3200 (both included).The numbers obtained should be printed in a comma-separated sequence on a single line.
+
+Ans:Logic1
+result=[]
+for i in range(2000,3201):
+    if i%7==0 and i%5!=0:
+        result.append(str(i))
+print(','.join(result))
+
+Ans:Logic2
+using List comprehension
+result=[x for x in range(2000,3201) if x%7==0 and x%5!=0]
+print(result)
+
+
+Que2:With a given integral number n, write a program to generate a dictionary that contains (i, i*i) such that is an integral number between 1 and n (both included).and then the program should print the dictionary. Suppose the following input is supplied to the program:8
+Then, the output should be:{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
+Hints:In case of input data being supplied to the question, it should be assumed to be a console input.Consider use dict()
+
+Ans:
+n=int(input("Enter the number of element in dictionary"))
+dic={}
+for i in range(1,n+1):
+    dic[i]=i*i
+print("Dictionary",dic)
+
+Question3:Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized. Suppose the following input is supplied to the program:
+Hello world
+Practice makes perfect
+Then, the output should be:
+HELLO WORLD
+PRACTICE MAKES PERFECT
+
+Ans:	
+result=[]
+n=int(input("Enter the number of lines to be entered"))
+for i in range(n):
+    s=input()
+    result.append(s.upper())
+for i in result:
+    print(i.upper())
+
+
+Question 4:Write a program to check wheather number is even or odd using if Else statement…
+Ans:
+num=int(input("Enter the number"))
+if num%2==0:
+    print("Number is even")
+else:
+    print("Number is odd")
+
+
+Question 5:program that grants access only to kids aged between 8-12
+using  if  else statement
+Hint::
+If aged between 8 to 12 then you are allowed… welcome!!
+Otherwise Sorry not allowed ..Bye!
+
+Ans:
+age=int(input("Enter the age"))
+if age>=8 and age<=12:
+    print("You are allowed...welcome")
+else:
+    print("Not allowed....Bye")
