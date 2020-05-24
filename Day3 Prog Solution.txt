@@ -1,0 +1,71 @@
+1.You are given with a list of integer elements. Make a new list which will store square of elements of previous list.
+Ans:
+list1=[1,2,3,4,5,6,7,8]
+result=[x*x for x in list1]
+print(result)
+
+
+2.From a list containing ints, strings and floats, make three lists to store them separately. 
+list1=[11,22,"Java",33,44.7,"Python",20.3]
+int_item=[]
+float_item=[]
+str_item=[]
+for i in list1:
+    if type(i)==int:
+        int_item.append(i)
+    elif type(i)==str:
+        str_item.append(i)
+    else:
+        float_item.append(i)
+print("Integer item list:",int_item)
+print("String item list:",str_item)    
+print("Float item list:",float_item)        
+
+
+3.Print the pattern
+1
+1 2 
+1 2 3
+1 2 3 4
+1 2 3 4 5
+Ans:
+for i in range(1,6):
+    for j in range(1,i+1):
+        print(j,end=" ")
+    print()
+
+
+4. Accept data in two 3*3  matrix and calculate the sum of the matrices
+Ans:
+import numpy as np
+r=int(input("Enter the row size"))
+c=int(input("Enter the coloumn size"))
+matrix=np.ndarray(shape=(r,c),dtype=int)
+print("Enter the %d element in %dx%d matrix:" %(r*c,r,c))
+for i in range(r):
+    for j in range(c):
+        matrix[i][j]=int(input())
+print("matrix %dx%d is:" %(r,c))
+print(matrix)
+print("Sum of matrix is:",matrix.sum())
+
+
+##5.Write a Python program to check whether a given number is a narcissistic number or not:
+##Ans:
+num=int(input("Enter the number"))
+sum=0
+temp=num
+while num!=0:
+    rem=num%10
+    sum=sum+(rem*rem*rem)
+    num=num//10
+if sum==temp:
+    print("Number is narcissistic")
+else:
+    print("Number is not narcissistic")
+
+
+
+
+
+
