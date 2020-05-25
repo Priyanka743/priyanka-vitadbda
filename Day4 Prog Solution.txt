@@ -1,0 +1,85 @@
+1.Write a function to find max of three numbers.
+Ans:
+def max_num(n1,n2,n3):
+    if n1>=n2 and n1>=n3:
+        print("Max number is:",n1)
+    elif n2>=n1 and n2>=n3:
+        print("Max number is:",n2)
+    else:
+        print("Max number is:",n3)
+max_num(3,1,9)        
+
+
+2.Write a Python program to detect the number of local variables declared in a function.
+Ans:
+def localvar():
+    a = 1
+    str= "python"
+print("Local variable in function:")
+print(localvar.__code__.co_nlocals)
+
+
+3.Write a recursive function to calculate the sum of numbers from 0 to 10
+Expected output: 55
+Ans:
+def recursiveSum(n): 
+    if n <= 1: 
+        return n 
+    return n + recursiveSum(n-1) 
+print(recursiveSum(10))
+
+
+4.Create a function showStudent() in such a way that it should accept student id, name, and it’s college name  and if the id and college name is missing in function call
+it should show it as by default id is 1 and college name  is VITA.
+Ans:
+def showStudent(name,Id=1,clgname="VITA"):
+    print(name,'has','id',Id,'and','college','name','is',clgname)
+showStudent("Priyanka")
+O/P:Priyanka has id 1 and college name is VITA
+
+5.Write a Python function that takes a list and returns a new list with unique elements of the first list.
+Sample List : [11,22,22,33,33,33,44,55,55,66]
+Unique List : [11, 22,33, 44, 55,66]
+Ans:
+def unique_list(list1):
+    result=list(set(list1))
+    print(result)
+unique_list([11,22,22,33,33,33,44,55,55,66])
+
+
+
+6.Write a program to obtain the sum of the first and last digit of this number 2 user defined functions
+1st for first digit
+2nd for last digit
+Example:
+Input:  5424
+Output: 9
+Ans:
+num=int(input("Enter the number"))
+def sum_of_digits(num):
+    sum=0
+    lastDigit = num % 10
+    firstDigit = num
+    while num>=10:
+        num = num//10;
+    firstDigit = num;
+    sum = firstDigit + lastDigit; 
+    print("Sum of first and last digit is:", sum);
+sum_of_digits(num)    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
