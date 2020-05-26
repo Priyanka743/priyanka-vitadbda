@@ -1,0 +1,73 @@
+1.Write a Python program to sort a list of elements using the bubble sort Algorithm.
+Ans:
+list1=[10,15,4,23,6]
+print("Unsorted list",list1)
+for j in range(len(list1)-1):
+    for i in range(len(list1)-1):
+        if list1[i]>list1[i+1]:
+            list1[i],list1[i+1]=list1[i+1],list1[i]
+print("Sorted list",list1)
+
+
+2.Write a Python program for sequential search (Linear search).
+Ans:
+def LinearSearch(list1,key):
+    for i in range(len(list1)):
+        if key==list1[i]:
+            print("Key element is found at index:",i)
+            break
+    else:
+        print("Key element is not found")
+list1=[11,55,44,22,33]
+print(list1)
+key=int(input("Enter the key element"))
+LinearSearch(list1,key)
+
+
+3.Write a Python program for Binary search
+Ans:
+def BinarySearch(list1,key):
+    low=0
+    high=len(list1)-1
+    Found=False
+    while low<=high and not Found:
+         mid=(low+high)//2
+         if key==list1[mid]:
+             Found=True
+         elif key>list1[mid]:
+             low=mid+1
+         else:
+             high=mid-1
+    if Found==True:
+        print("Key is found")
+    else:
+        print("Key is not found")
+list1=[50,10,20,40,30]
+list1.sort()
+print(list1)
+key=int(input("Enter the key"))
+BinarySearch(list1,key)
+
+
+4.Write a python program to concatenate two lists index-wise.
+List1 = [“M”,”na”,”i”,”lak”]
+List2 = [“y”,”me”,”s”,”han”]
+Expected output:
+[“My”,”name”,”is”,”lakhan”]
+Ans:
+list1=["M","na","i","lak"]
+list2=["y","me","s","han"]
+result=[x+y for x,y in zip(list1,list2)]
+print(result)
+
+
+5.Iterate a given list and check if a given element already exists in a dictionary as a key’s value if not delete it from the list.
+roll_number = [47, 64, 69, 37, 76, 83, 95, 97]
+sampledict = {“John”:47,”Peter”:64,”Mahi”:37,”Maria”:76}
+Ans:
+roll_number  = [47, 64, 69, 37, 76, 83, 95, 97]
+sampledict  = {"John":47,"Peter":64,"Mahi":37,"Maria":76} 
+print("List:", roll_number)
+print("Dictionary:", sampledict)
+roll_number =[x for x in roll_number if x in sampledict.values()]
+print("after deleting elemnts from list ", roll_number)
