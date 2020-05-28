@@ -1,0 +1,92 @@
+5. write any program  to achieve composition in Python
+def addition(x):
+    return x+2
+def multiply(x):
+    return x*2
+print(multiply(addition(4)))
+
+
+4. Write a program to count how many reference variables in a program.
+Ans:
+import sys
+class A:
+    def show(self):
+        print("This is aa function")
+class B(A):
+    def sample(self):
+        print("This is bb function")
+b=B()
+b.show()
+b.sample()
+print(sys.getrefcount(b))
+
+
+3. Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as argument.
+Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.
+Hints:To override a method in super class, we can define a method with the same name in the super class.
+Ans:
+class Shape:
+    def area(self):
+        print("Area of shape is 0")
+class Square(Shape):
+    def __init__(self,l):
+        self.length=l  
+    def area(self):
+        print("Area of shape is 0")
+S=Square(5)
+S.area()
+
+
+2. Write a Python class named Circle constructed by a radius and two methods which will compute the area and the perimeter of a circle.
+class Circle():
+    def __init__(self, r):
+        self.radius = r
+    def area(self):
+        return self.radius**2*3.14
+    def perimeter(self):
+        return 2*self.radius*3.14
+C= Circle(8)
+print(C.area())
+print(C.perimeter())
+
+
+1.Write python program to perform bank operations using class and objects.
+Conditions:
+a.Bank name should be static.
+b.Using menu driven program.
+1 .Deposit
+2. Withdraw
+3. Exit
+
+Ans:
+class Bank:
+    Bankname="State Bank"
+    def __init__(self):
+        self.balance=500
+    def deposite(self,amount):
+        self.balance+=amount
+        print("Balance after deposite:",self.balance)
+    def withdraw(self,amount):
+        self.balance-=amount
+        print("Balance after withdraw:",self.balance)
+    def exit(self):
+        print("Exit")
+print("Select your choice:\n1.Deposite \n2.Withdraw \n3.Exit")
+n=int(input("Enter the number to select option"))
+b=Bank()
+if n==1:
+    amount=int(input("Enter amount for deposite"))
+    b.deposite(amount)
+elif n==2:
+    amount=int(input("Enter amount for withdraw"))
+    b.withdraw(amount)
+elif n==3:
+    b.exit()
+else:
+    pass
+    
+
+
+
+
+
