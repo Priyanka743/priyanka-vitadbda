@@ -1,0 +1,91 @@
+				
+1. Write a function to compute divide by zero and use try/except to catch the exceptions.
+Ans:
+def divide(a,b):
+    try:
+        result=a//b
+        print("Your answer is:",result)
+    except ZeroDivisionError:
+        print("You are dividing by zero")
+divide(3,2)
+divide(6,0)
+
+
+2. Write python program to check  that given number is valid mobile number or not?
+Ans:
+import re
+pattern = "(0/91)?[7-9][0-9]{9}"
+def isValid(num): 
+    if(re.match(pattern,num)):     
+        print ("Valid mobile number")      
+    else : 
+        print ("Invalid mobile number")
+isValid("34567890233")    
+isValid("7523456781")
+
+
+3. Write python program to check  that given email address is valid or not?
+Ans:
+import re
+regex='^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w+$'
+def isvalid(email):
+    if(re.search(regex,email)):  
+        print("Valid Email")  
+    else:  
+        print("Invalid Email")  
+isvalid("bpriyanka513@gmail.com")
+isvalid("34priyanka.com")
+
+
+4. Write a python program to check given car registration number is valid Maharashtra state registration number or not?
+Ans:
+import re
+regex="^[MH]+[19]+\w[A-Z]+[0-9]"
+def isvalid(regno):
+    if(re.match(regex,regno)):
+        print("Valid registration car number")
+    else:
+        print("Invalid registration car number")
+isvalid("MH.19.AB 5512")
+isvalid("MH19BZ3451")
+
+
+5. Write a python program to decorate arithmetic operations.
+def arthmeticop(num1,num2):
+    add=num1+num2
+    print("Addition is...>",add)
+    sub=num1-num2
+    print("Subtraction is...>",sub)
+    mul=num1*num2
+    print("Multiplication is...>",mul)
+    div=num1//num2
+    print("Division is...>",div)
+    mod=num1%num2
+    print("Modulus is...>",mod)
+arthmeticop(20,10)
+
+
+6. Write a python program to generate Fibonacci Numbers upto 100 using generator
+Ans:
+def fib(mymax):
+    n1,n2=1,2
+    while True:
+        n3=n1+n2
+        if n3<mymax:
+            yield n3
+            n1=n2
+            n2=n3
+        else:
+            break
+generator=fib(101)
+print(next(generator))
+    
+
+
+
+
+
+
+
+
+
