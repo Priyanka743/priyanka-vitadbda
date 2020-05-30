@@ -1,0 +1,153 @@
+5.Write a Python program to square and cube every number in a given list of integers using Lambda. 
+Ans:
+list1=[1,2,3,4,5,6,7,8]
+print("Original list",list1)
+sq_list=list(map(lambda x:x*x,list1))
+print("square of each number in list",sq_list)
+cu_list=list(map(lambda x:x*x*x,list1))
+print("cube of each number in list",cu_list)
+
+
+3.Write a program to implement multiple inheritance
+class Circle:
+    def shape(self):
+        print("This is a function of circle")
+class Square:
+    def shape(self):
+        print("This is a function of square")
+class Recangle(Circle,Square):
+    def area(self):
+        print("This is a function of rectangle")
+r=Recangle()
+r.area()
+r.shape()
+O/P:This is a function of rectangle
+    This is a function of circle
+
+class Circle:
+    def shape(self):
+        print("This is a function of circle")
+class Square:
+    def shape(self):
+        print("This is a function of square")
+class Recangle(Circle,Square):
+    def shape(self):
+        print("This is a function of rectangle")
+r=Recangle()
+r.shape()
+O/P:This is a function of rectangle
+
+
+4. Write a program to implement operator overloading in python
+Ans:
+class A:
+    def __init__(self, a):
+        self.a = a 
+    # adding two objects  
+    def __add__(self, o): 
+        return self.a + o.a  
+ob1 = A(11) 
+ob2 = A(22) 
+ob3 = A("Priyanka") 
+ob4 = A("Bharude") 
+print(ob1 + ob2) 
+print(ob3 + ob4) 
+
+1.Write a program to implement Constructor with Variable Number of Arguments.
+Ans:
+class Addition:
+    def __init__(self, f, s): 
+        self.first = f 
+        self.second = s 
+    def display(self): 
+        print("First number:",self.first) 
+        print("Second number:",self.second)
+        print("Addition of two numbers:",self.ans)
+    def calculate(self): 
+        self.ans = self.first + self.second 
+obj = Addition(100,200) 
+obj.calculate() 
+obj.display() 
+
+
+class Library:
+    def __init__(self):
+        self.availablebookname="Lets C"
+    def displayallBooks(self):
+        print("available book name is..>",self.availablebookname)
+    def lendBook(self):
+        self.book=input("Enter name of book which you want to lend")
+        self.studentname=input("enter your name")
+        print("The book name",self.book,"is lend by library to",self.studentname)
+    def addnewBook(self):
+        self.newbookname=input("Enter new book name...>")
+        print("The new book added in library with previous book is...>",self.newbookname+" "+self.availablebookname)
+class Student(Library):
+    def registration(self):
+        self.name=input("enter your name..>")
+        self.gender=input("male/female")
+        self.age=input("Your age is...>")
+        print("your name","is",self.name,"and","you are",self.gender,"and your age is",self.age)
+    def requestBook(self):
+        self.bookname=input("enter book name which you want...>")
+        self.booknumber=input("your book number is...>")
+        print("Name of book request by you is...>",self.bookname,"and book number is...>",self.booknumber)
+    def returnBook(self):
+        self.name=input("your name is...>")
+        self.bookname=input("Enter the book name which you return..>")
+        self.booknumber=input("your book number is...>")
+        self.date=input("Enter today date")
+        print("The book",self.bookname,"is return by",self.name,"on date of",self.date)
+    def exit(self):
+        print("exit from library books details")
+s=Student()
+while True:
+    print("****Select your choice****\n1.displayallBook \n2.registration \n3.requestBook \n4.lendBook\n5.addnewBook \n6.returnBook \n7.Exit")
+    n=int(input("Enter the number to select option"))
+    if n==1:
+        s.displayallBooks()
+    elif n==2:
+        s.registration()
+    elif n==3:
+        s.requestBook()
+    elif n==4:
+        s.lendBook()
+    elif n==5:
+        s.addnewBook()
+    elif n==6:
+        s.returnBook()
+    else:
+        s.exit()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
