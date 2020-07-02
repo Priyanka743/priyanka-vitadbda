@@ -30,45 +30,45 @@
 
     		 OPT_LOCAL_INFILE=1
 
-	 *  Now Reconnect to your database 
+	  *  Now Reconnect to your database 
 
 5. Create EMR cluster and connect it with SSH.
 
 6. Run sqoop import command to import data from sql database to hdfs.
 	
-      ![Sqimport](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L1.jpg)
+![Sqimport](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L1.jpg)
 
 7. Now check whether salaries directory is created on hdfs as follow:
 	
-      ![dirch](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L2.jpg)
+![dirch](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L2.jpg)
 
 8. Then use cat command to see the data in the file.
 
-      ![dirdata](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L3.jpg)
+![dirdata](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L3.jpg)
 
-9. Now we will import only salary and age data from the database and put it into new directory named       salaries2.
+9. Now we will import only salary and age data from the database and put it into new directory named salaries2.
  	
-      ![dirdata1](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L4.jpg)
+![dirdata1](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L4.jpg)
 
 10. Now check whether salaries2 directory is created on hdfs with 2 files present as shown below:
 	
-      ![dirdata2](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L5.jpg)
+![dirdata2](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L5.jpg)
 
 11. Then use cat command to see the data in the file.
 
-      ![dirdata2](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L6.jpg)
+![dirdata2](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L6.jpg)
 
-12. Now we will use --split-by command to split our data according to a certain column value and put it      into new directory named salaries3.
+12. Now we will use --split-by command to split our data according to a certain column value and put it into new directory named salaries3.
 
-      ![dirdata3](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L7.jpg)
+![dirdata3](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L7.jpg)
 
 13. Now check whether salaries3 directory is created on hdfs with 3 files present as shown below:
       
-      ![dirdata4](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L8.jpg)
+![dirdata4](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L8.jpg)
 
 14. Then use cat command to see the data in the file.
 	
-      ![dirdata4](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L9.jpg)
+![dirdata4](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L9.jpg)
 
 	
 
