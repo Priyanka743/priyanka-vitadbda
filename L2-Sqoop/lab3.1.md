@@ -36,7 +36,7 @@
 
 6. Run sqoop import command to import data from sql database to hdfs.
 	
-![Sqimport](https://github.com/Priyanka743/priyanka-vitadbda/tree/Big-Data/images/L1.jpg)
+![Sqimport](../images/L1.jpg)
 
 7. Now check whether salaries directory is created on hdfs as follow:
 	
